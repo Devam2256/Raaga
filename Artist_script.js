@@ -27,13 +27,23 @@
                     songs: [
                         { title: "Tum Hi Ho", duration: "4:22", image: "Images/weeknd.jpg" },
                         { title: "Raabta", duration: "3:45", image: "Images/weeknd.jpg" },
+                        { title: "Agar Tum Saath Ho", duration: "5:41", image: "Images/weeknd.jpg" },
+                        { title: "Tum Hi Ho", duration: "4:22", image: "Images/weeknd.jpg" },
+                        { title: "Raabta", duration: "3:45", image: "Images/weeknd.jpg" },
+                        { title: "Agar Tum Saath Ho", duration: "5:41", image: "Images/weeknd.jpg" },{ title: "Tum Hi Ho", duration: "4:22", image: "Images/weeknd.jpg" },
+                        { title: "Raabta", duration: "3:45", image: "Images/weeknd.jpg" },
                         { title: "Agar Tum Saath Ho", duration: "5:41", image: "Images/weeknd.jpg" }
+
                     ],
                     suggested: [
-                        { title: "Shayad", artist: "Pritam", image: "Images/weeknd.jpg" },
-                        { title: "Bekhayali", artist: "Sachet Tandon", image: "Images/weeknd.jpg" }
+                        { title: "Tum Hi Ho", duration: "4:22", image: "Images/weeknd.jpg" },
+                        { title: "Raabta", duration: "3:45", image: "Images/weeknd.jpg" },
+                        { title: "Agar Tum Saath Ho", duration: "5:41", image: "Images/weeknd.jpg" },
+                        { title: "Tum Hi Ho", duration: "4:22", image: "Images/weeknd.jpg" }
                     ],
                     releases: [
+                        { title: "Soulful Voice", year: "2023", image: "Images/weeknd.jpg" },
+                        { title: "Soulful Voice", year: "2023", image: "Images/weeknd.jpg" },
                         { title: "Soulful Voice", year: "2023", image: "Images/weeknd.jpg" }
                     ]
                 },
@@ -45,6 +55,12 @@
                     songs: [
                         { title: "Blinding Lights", duration: "3:22", image: "Images/blindinglights.jpg" },
                         { title: "Starboy", duration: "3:50", image: "Images/starboy.jpg" },
+                        { title: "Save Your Tears", duration: "3:35", image: "Images/saveyourtears.jpg" },
+                        { title: "Blinding Lights", duration: "3:22", image: "Images/blindinglights.jpg" },
+                        { title: "Starboy", duration: "3:50", image: "Images/starboy.jpg" },
+                        { title: "Save Your Tears", duration: "3:35", image: "Images/saveyourtears.jpg" },
+                        { title: "Blinding Lights", duration: "3:22", image: "Images/blindinglights.jpg" },
+                        { title: "Starboy", duration: "3:50", image: "Images/starboy.jpg" },
                         { title: "Save Your Tears", duration: "3:35", image: "Images/saveyourtears.jpg" }
                     ],
                     suggested: [
@@ -52,6 +68,8 @@
                         { title: "After Hours", artist: "The Weeknd", image: "Images/afterhours.jpg" }
                     ],
                     releases: [
+                        { title: "Hurry Up Tomorrow", year: "2025", image: "Images/lastsong.jpg" },
+                        { title: "Hurry Up Tomorrow", year: "2025", image: "Images/lastsong.jpg" },
                         { title: "Hurry Up Tomorrow", year: "2025", image: "Images/lastsong.jpg" }
                     ]
                 },
@@ -61,6 +79,12 @@
                     banner: "Images/Ed_Banner.jpg",
                     listeners: "97,560,210 monthly listeners",
                     songs: [
+                        { title: "Perfect", duration: "4:23", image: "Images/perfect.jpg" },
+                        { title: "Shape of You", duration: "3:53", image: "Images/shapeofyou.jpg" },
+                        { title: "Thinking Out Loud", duration: "4:41", image: "Images/thinkingoutloud.jpg" },
+                        { title: "Perfect", duration: "4:23", image: "Images/perfect.jpg" },
+                        { title: "Shape of You", duration: "3:53", image: "Images/shapeofyou.jpg" },
+                        { title: "Thinking Out Loud", duration: "4:41", image: "Images/thinkingoutloud.jpg" },
                         { title: "Perfect", duration: "4:23", image: "Images/perfect.jpg" },
                         { title: "Shape of You", duration: "3:53", image: "Images/shapeofyou.jpg" },
                         { title: "Thinking Out Loud", duration: "4:41", image: "Images/thinkingoutloud.jpg" }
@@ -81,6 +105,12 @@
                     songs: [
                         { title: "Love Story", duration: "3:57", image: "Images/lovestory.jpg" },
                         { title: "You Belong With Me", duration: "3:52", image: "Images/youbelongwithme.jpg" },
+                        { title: "Shake It Off", duration: "3:39", image: "Images/shakeitoff.jpg" },
+                        { title: "Love Story", duration: "3:57", image: "Images/lovestory.jpg" },
+                        { title: "You Belong With Me", duration: "3:52", image: "Images/youbelongwithme.jpg" },
+                        { title: "Shake It Off", duration: "3:39", image: "Images/shakeitoff.jpg" },
+                        { title: "Love Story", duration: "3:57", image: "Images/lovestory.jpg" },
+                        { title: "You Belong With Me", duration: "3:52", image: "Images/youbelongwithme.jpg" },
                         { title: "Shake It Off", duration: "3:39", image: "Images/shakeitoff.jpg" }
                     ],
                     suggested: [
@@ -97,6 +127,12 @@
                     banner: "Images/DuaLipa_Banner.jpg",
                     listeners: "85,320,000 monthly listeners",
                     songs: [
+                        { title: "Don't Start Now", duration: "3:03", image: "Images/dontstartnow.jpg" },
+                        { title: "Levitating", duration: "3:23", image: "Images/levitating.jpg" },
+                        { title: "New Rules", duration: "3:29", image: "Images/newrules.jpg" },
+                        { title: "Don't Start Now", duration: "3:03", image: "Images/dontstartnow.jpg" },
+                        { title: "Levitating", duration: "3:23", image: "Images/levitating.jpg" },
+                        { title: "New Rules", duration: "3:29", image: "Images/newrules.jpg" },
                         { title: "Don't Start Now", duration: "3:03", image: "Images/dontstartnow.jpg" },
                         { title: "Levitating", duration: "3:23", image: "Images/levitating.jpg" },
                         { title: "New Rules", duration: "3:29", image: "Images/newrules.jpg" }
@@ -117,6 +153,12 @@
                     songs: [
                         { title: "Dakiti", duration: "3:25", image: "Images/dakiti.jpg" },
                         { title: "Me Porto Bonito", duration: "3:39", image: "Images/meportobonito.jpg" },
+                        { title: "Yonaguni", duration: "3:26", image: "Images/yonaguni.jpg" },
+                        { title: "Dakiti", duration: "3:25", image: "Images/dakiti.jpg" },
+                        { title: "Me Porto Bonito", duration: "3:39", image: "Images/meportobonito.jpg" },
+                        { title: "Yonaguni", duration: "3:26", image: "Images/yonaguni.jpg" },
+                        { title: "Dakiti", duration: "3:25", image: "Images/dakiti.jpg" },
+                        { title: "Me Porto Bonito", duration: "3:39", image: "Images/meportobonito.jpg" },
                         { title: "Yonaguni", duration: "3:26", image: "Images/yonaguni.jpg" }
                     ],
                     suggested: [
@@ -133,6 +175,12 @@
                     banner: "Images/BillieEilish_Banner.jpg",
                     listeners: "94,000,000 monthly listeners",
                     songs: [
+                        { title: "Bad Guy", duration: "3:14", image: "Images/badguy.jpg" },
+                        { title: "Everything I Wanted", duration: "4:05", image: "Images/everythingiwanted.jpg" },
+                        { title: "Happier Than Ever", duration: "4:58", image: "Images/happierthanever.jpg" },
+                        { title: "Bad Guy", duration: "3:14", image: "Images/badguy.jpg" },
+                        { title: "Everything I Wanted", duration: "4:05", image: "Images/everythingiwanted.jpg" },
+                        { title: "Happier Than Ever", duration: "4:58", image: "Images/happierthanever.jpg" },
                         { title: "Bad Guy", duration: "3:14", image: "Images/badguy.jpg" },
                         { title: "Everything I Wanted", duration: "4:05", image: "Images/everythingiwanted.jpg" },
                         { title: "Happier Than Ever", duration: "4:58", image: "Images/happierthanever.jpg" }
@@ -174,16 +222,23 @@
                 document.getElementById("song-list").innerHTML = songHTML;
         
                 let suggestedHTML = "";
-                artist.suggested.forEach((track) => {
-                    suggestedHTML += `
-                        <div class="bg-[#181818] p-4 rounded-lg hover:bg-[#282828] transition-colors">
-                            <img src="${track.image}" alt="Album Art" class="w-full aspect-square object-cover rounded-lg mb-4">
-                            <h3 class="font-bold">${track.title}</h3>
-                            <p class="text-sm text-gray-400">${track.artist}</p>
-                        </div>
-                    `;
-                });
-                document.getElementById("suggested-list").innerHTML = suggestedHTML;
+                    artist.suggested.forEach((track, index) => {
+                        suggestedHTML += `
+                            <div class="flex items-center justify-between p-2 hover:bg-white/10 rounded-lg">
+                                <div class="flex items-center gap-4">
+                                    <span class="font-bold text-gray-400 w-6">${index + 1}</span>
+                                    <img src="${track.image}" alt="Album Art" class="w-12 h-12 rounded">
+                                    <div>
+                                        <p class="font-medium">${track.title}</p>
+                                        <p class="text-sm text-gray-400">${track.artist}</p>
+                                    </div>
+                                </div>
+                                <span class="text-gray-400">${track.duration}</span>
+                            </div>
+                        `;
+                    });
+                    document.getElementById("suggested-list").innerHTML = suggestedHTML;
+
         
                 let releaseHTML = "";
                 artist.releases.forEach((release) => {
@@ -197,5 +252,6 @@
                 });
                 document.getElementById("releases-list").innerHTML = releaseHTML;
             }
+            
         });
         
