@@ -131,7 +131,8 @@ document.addEventListener("DOMContentLoaded", () => {
   // Play button click event
   playButton.addEventListener("click", () => {
     alert("Playing music...")
-  })
+  });
+});
 
   // Follow button toggle event
   followButton.addEventListener("click", () => {
@@ -194,10 +195,10 @@ document.addEventListener("DOMContentLoaded", () => {
   closeModals.forEach((button) => {
     button.addEventListener("click", () => {
       button.closest(".fixed").classList.add("hidden")
-      blurLayer.classList.add("hidden")
+      document.getElementById("blurLayer").classList.add("hidden") // ✅ Ensure background blur is also removed
     })
   })
-})
+  
 
 function playAudio(button) {
   // Find the audio element within the same parent (li)

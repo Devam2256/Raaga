@@ -1,3 +1,4 @@
+
 document.addEventListener("DOMContentLoaded", function () {
     // Get album name from URL
     const urlParams = new URLSearchParams(window.location.search);
@@ -190,87 +191,91 @@ document.addEventListener("DOMContentLoaded", function () {
         },
     };
 
-    // Check if album exists
-    if (albums[albumName]) {
-        // Set album details
-        document.getElementById("albumTitle").innerText = albums[albumName].title;
-        document.getElementById("albumArtist").innerText = albums[albumName].artist;
-        document.getElementById("albumImage").src = albums[albumName].image;
-        document.getElementById("albumDescription").innerText = albums[albumName].description;
-
-        // Apply dynamic background gradient
-        const playlistSection = document.querySelector(".playlist-bg");
-        playlistSection.className = `flex-1 overflow-y-auto ${albums[albumName].bgGradient}`; 
-
-        // Generate the song list dynamically
-        const songListContainer = document.getElementById("songList");
-        songListContainer.innerHTML = "";
-
-        albums[albumName].songs.forEach(song => {
-            const songItem = document.createElement("div");
-            songItem.className = "song-item flex items-center p-4 hover:bg-white/10 rounded-lg transition-colors group cursor-pointer";
-            songItem.innerHTML = `
-                <div class="w-8 text-center relative">
-                    <span class="song-number text-gray-400 group-hover:hidden">${song.number}</span>
-                    <i class="fas fa-play text-white text-lg absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-200"></i>
-                </div>
-                <img src="${song.image}" alt="Song Art" class="w-12 h-12 rounded mx-4">
-                <div class="flex-1">
-                    <h3 class="font-semibold">${song.title}</h3>
-                    <p class="text-sm text-gray-400">${song.artist}</p>
-                </div>
-                <span class="text-gray-400 mr-4">${song.duration}</span>
-            `;
-
-            songListContainer.appendChild(songItem);
-        });
+    if (!albumName || !albums[albumName]) {
+        console.error("Invalid album name:", albumName);
+        return;
     }
 
-    // // Music Player Controls
-    // const audioPlayer = document.getElementById("audioPlayer");
-    // const playerImage = document.getElementById("playerImage");
-    // const playerTitle = document.getElementById("playerTitle");
-    // const playerArtist = document.getElementById("playerArtist");
-    // const playPauseBtn = document.getElementById("playPauseBtn");
-    // let currentSongIndex = 0;
-    // let currentSongs = [];
+    const album = albums[albumName];
+    const songListContainer = document.getElementById("songList");
+    const playPauseBtn = document.getElementById("playPauseBtn");
+    const audioPlayer = document.getElementById("audioPlayer");
+    const playerImage = document.getElementById("playerImage");
+    const playerTitle = document.getElementById("playerTitle");
+    const playerArtist = document.getElementById("playerArtist");
+    const nextBtn = document.getElementById("nextBtn");
+    const prevBtn = document.getElementById("prevBtn");
 
-    // function playSong(song, albumImage) {
-    //     currentSongs = albums[albumName].songs;
-    //     currentSongIndex = currentSongs.findIndex(s => s.title === song.title);
+    let currentSongIndex = 0;
+    let currentSongs = album.songs;
 
-    //     // Set song details
-    //     playerTitle.innerText = song.title;
-    //     playerArtist.innerText = song.artist;
-    //     playerImage.src = albumImage;
-    //     audioPlayer.src = song.src;
+    // Populate album details
+    document.getElementById("albumTitle").innerText = album.title;
+    document.getElementById("albumArtist").innerText = album.artist;
+    document.getElementById("albumDescription").innerText = album.description;
+    document.getElementById("albumImage").src = album.image;
 
-    //     // Show player and play song
-    //     document.getElementById("musicPlayer").classList.remove("hidden");
-    //     audioPlayer.play();
-    //     playPauseBtn.innerHTML = `<i class="fas fa-pause"></i>`;
-    // }
+    // Load songs dynamically
+    songListContainer.innerHTML = ""; 
+    album.songs.forEach((song, index) => {
+        const songItem = document.createElement("div");
+        songItem.className = "song-item flex items-center p-4 hover:bg-white/10 rounded-lg transition-colors group cursor-pointer";
+        songItem.setAttribute("data-index", index);
 
-    // // Play/Pause Functionality
-    // playPauseBtn.addEventListener("click", function () {
-    //     if (audioPlayer.paused) {
-    //         audioPlayer.play();
-    //         playPauseBtn.innerHTML = `<i class="fas fa-pause"></i>`;
-    //     } else {
-    //         audioPlayer.pause();
-    //         playPauseBtn.innerHTML = `<i class="fas fa-play"></i>`;
-    //     }
-    // });
+        songItem.innerHTML = `
+            <div class="w-8 text-center relative">
+                <span class="song-number text-gray-400 opacity-100 group-hover:opacity-0 transition-opacity duration-200">${index + 1}</span>
+                <i class="fas fa-play text-white text-lg absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-200"></i>
+            </div>
+            <img src="${song.image}" class="w-12 h-12 rounded mx-4">
+            <div class="flex-1">
+                <h3 class="font-semibold">${song.title}</h3>
+                <p class="text-sm text-gray-400">${song.artist}</p>
+            </div>
+            <span class="text-gray-400 mr-4">${song.duration}</span>
+        `;
 
-    // // Next Song
-    // document.getElementById("nextBtn").addEventListener("click", function () {
-    //     currentSongIndex = (currentSongIndex + 1) % currentSongs.length;
-    //     playSong(currentSongs[currentSongIndex], albums[albumName].image);
-    // });
+        // Play song when clicked
+        songItem.addEventListener("click", function () {
+            playSong(index);
+        });
 
-    // // Previous Song
-    // document.getElementById("prevBtn").addEventListener("click", function () {
-    //     currentSongIndex = (currentSongIndex - 1 + currentSongs.length) % currentSongs.length;
-    //     playSong(currentSongs[currentSongIndex], albums[albumName].image);
-    // });
+        songListContainer.appendChild(songItem);
+    });
+
+    function playSong(songIndex) {
+        currentSongIndex = songIndex;
+        const song = currentSongs[currentSongIndex];
+
+        playerTitle.innerText = song.title;
+        playerArtist.innerText = song.artist;
+        playerImage.src = song.image;
+        audioPlayer.src = song.src;
+
+        document.getElementById("musicPlayer").classList.remove("hidden");
+        audioPlayer.play();
+        playPauseBtn.innerHTML = `<i class="fas fa-pause"></i>`;
+    }
+
+    // Play/Pause Button - Fixing the Pause Issue
+    playPauseBtn.addEventListener("click", function () {
+        if (audioPlayer.paused) {
+            audioPlayer.play();
+            playPauseBtn.innerHTML = `<i class="fas fa-pause"></i>`;
+        } else {
+            audioPlayer.pause();
+            playPauseBtn.innerHTML = `<i class="fas fa-play"></i>`;
+        }
+    });
+
+    // Next and Previous Song
+    nextBtn.addEventListener("click", function () {
+        currentSongIndex = (currentSongIndex + 1) % currentSongs.length;
+        playSong(currentSongIndex);
+    });
+
+    prevBtn.addEventListener("click", function () {
+        currentSongIndex = (currentSongIndex - 1 + currentSongs.length) % currentSongs.length;
+        playSong(currentSongIndex);
+    });
 });

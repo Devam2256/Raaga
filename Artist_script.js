@@ -22,19 +22,19 @@
             const artists = {
                 "arijit_singh": {
                     name: "Arijit Singh",
-                    banner: "Images/Arijit_Banner.jpg",
+                    banner: "Images/weeknd.jpg",
                     listeners: "89,000,000 monthly listeners",
                     songs: [
-                        { title: "Tum Hi Ho", duration: "4:22", image: "Images/tumhiho.jpg" },
-                        { title: "Raabta", duration: "3:45", image: "Images/raabta.jpg" },
-                        { title: "Agar Tum Saath Ho", duration: "5:41", image: "Images/agartumsaathho.jpg" }
+                        { title: "Tum Hi Ho", duration: "4:22", image: "Images/weeknd.jpg" },
+                        { title: "Raabta", duration: "3:45", image: "Images/weeknd.jpg" },
+                        { title: "Agar Tum Saath Ho", duration: "5:41", image: "Images/weeknd.jpg" }
                     ],
                     suggested: [
-                        { title: "Shayad", artist: "Pritam", image: "Images/shayad.jpg" },
-                        { title: "Bekhayali", artist: "Sachet Tandon", image: "Images/bekhayali.jpg" }
+                        { title: "Shayad", artist: "Pritam", image: "Images/weeknd.jpg" },
+                        { title: "Bekhayali", artist: "Sachet Tandon", image: "Images/weeknd.jpg" }
                     ],
                     releases: [
-                        { title: "Soulful Voice", year: "2023", image: "Images/soulfulvoice.jpg" }
+                        { title: "Soulful Voice", year: "2023", image: "Images/weeknd.jpg" }
                     ]
                 },
         
